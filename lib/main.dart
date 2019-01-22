@@ -23,21 +23,13 @@ class _MyAppState extends State<MyApp> {
               Container(
                 margin: EdgeInsets.all(10.0),
                 child: RaisedButton(
-                  onPressed: () {},
-                  child: Text('Search'),
+                  onPressed: () {
+                    setState((){
+                    _businesses.add('More info');
+                    });
+                  },
+                  child: Text('test test'),
                 ),
-              ),
-              Column(
-                children: _businesses
-                    .map((element) => Card(
-                          child: Column(
-                            children: <Widget>[
-                              Image.asset('assets/city.jpg'),
-                              Text(element)
-                            ],
-                          ),
-                        ))
-                    .toList(),
               ),
             ],
           )),
