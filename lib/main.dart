@@ -9,7 +9,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  List<String> _businesses = ['Store Tester'];
+
 
   @override
   Widget build(BuildContext context) {
@@ -20,17 +20,7 @@ class _MyAppState extends State<MyApp> {
           ),
           body: Column(
             children: [
-              Container(
-                margin: EdgeInsets.all(10.0),
-                child: RaisedButton(
-                  onPressed: () {
-                    setState((){
-                    _businesses.add('More info');
-                    });
-                  },
-                  child: Text('test test'),
-                ),
-              ),
+,
             ],
           )),
     );
