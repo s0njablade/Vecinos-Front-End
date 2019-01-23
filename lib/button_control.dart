@@ -11,8 +11,9 @@ class ButtonControl extends StatelessWidget {
     return RaisedButton(
         color: Theme.of(context).primaryColor,
         onPressed: () {
-          addBusiness('');
+          addBusiness('Pies');
         },
-        child: Text('test test'),
+        child: Text('test test')
+    );
 }
 }

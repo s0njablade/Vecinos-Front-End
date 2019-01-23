@@ -34,7 +34,7 @@ class _BusinessManagerState extends State<BusinessManager> {
 
   void _addBusinesses(String business) {
     setState(() {
-      _businesses.add('More info');
+      _businesses.add(business);
     });
   }
 
@@ -45,9 +45,9 @@ class _BusinessManagerState extends State<BusinessManager> {
       children: [
         Container(
           margin: EdgeInsets.all(10.0),
-          child: ButtonControl(_addBusiness),
+          child: ButtonControl(_addBusinesses),
         ),
-        Businesses(_businesses)
+        Expanded(child: Businesses(_businesses))
       ],
     );
   }
