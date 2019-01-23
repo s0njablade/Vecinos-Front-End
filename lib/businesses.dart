@@ -16,7 +16,7 @@ class Businesses extends StatelessWidget {
               (element) => Card(
                   child: Column(
                     children: <Widget>[
-                      // Image.asset('assets/city.jpg'),
+                      Image.asset('assets/city.jpg'),
                       Text(element)
                     ],
                   ),
