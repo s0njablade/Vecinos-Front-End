@@ -6,10 +6,24 @@ class BusinessesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Vecinos'),
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            AppBar(
+              automaticallyImplyLeading: false,
+              title: Text('Filter'),
+            ),
+            ListTile(
+              title: Text('Manage'),
+              onTap: () {},
+            )
+          ],
         ),
-        body: BusinessManager(),
-      );
+      ),
+      appBar: AppBar(
+        title: Text('Vecinos'),
+      ),
+      body: BusinessManager(),
+    );
   }
 }
