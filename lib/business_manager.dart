@@ -4,7 +4,7 @@ import './businesses.dart';
 import './button_control.dart';
 
 class BusinessManager extends StatefulWidget {
-  final String firstBusiness;
+  final Map<String, String> firstBusiness;
 
   BusinessManager({this.firstBusiness}) {
     print('[ProductManager Widget] Constructor()');
@@ -18,7 +18,7 @@ class BusinessManager extends StatefulWidget {
 }
 
 class _BusinessManagerState extends State<BusinessManager> {
-  List<String> _businesses = [];
+  List<Map<String, String>> _businesses = [];
 
   @override
   void initState() {
@@ -35,7 +35,7 @@ class _BusinessManagerState extends State<BusinessManager> {
     super.didUpdateWidget(oldWidget);
   }
 
-  void _addBusinesses(String business) {
+  void _addBusinesses(Map<String, String> business) {
     setState(() {
       _businesses.add(business);
     });

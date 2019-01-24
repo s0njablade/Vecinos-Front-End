@@ -8,10 +8,11 @@ class ButtonControl extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
-        color: Theme.of(context).primaryColor,
-        onPressed: () {
-          addBusiness('Pies');
-        },
-        child: Text('test test'));
+      color: Theme.of(context).primaryColor,
+      onPressed: () {
+        addBusiness({'title': 'art', 'image': 'assets/denver.jpg'});
+      },
+      child: Text('test test'),
+    );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../business_manager.dart';
 
-class HomePage extends StatelessWidget {
+class BusinessesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

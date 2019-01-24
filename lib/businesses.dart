@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import './pages/business.dart';
 
 class Businesses extends StatelessWidget {
-  final List<String> businesses;
+  final List<Map<String, String>> businesses;
 
   Businesses([this.businesses = const []]) {
     print('Businesses Widget] Constructor');
@@ -13,8 +13,8 @@ class Businesses extends StatelessWidget {
     return Card(
       child: Column(
         children: <Widget>[
-          Image.asset('assets/city.jpg'),
-          Text(businesses[index]),
+          Image.asset(businesses[index]['image']),
+          Text(businesses[index]['title']),
           ButtonBar(
             alignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -23,7 +23,8 @@ class Businesses extends StatelessWidget {
                 onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (BuildContext context) => BusinessPage(),
+                        builder: (BuildContext context) => BusinessPage(
+                          businesses[index]['title'], businesses[index]['image']),
                       ),
                     ),
               )
