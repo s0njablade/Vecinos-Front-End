@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../business_manager.dart';
 import './community.dart';
+import './neighborhoods.dart';
+import './category.dart';
 
 class BusinessesPage extends StatelessWidget {
   @override
@@ -17,12 +19,28 @@ class BusinessesPage extends StatelessWidget {
             ListTile(
               title: Text('Community'),
               onTap: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                         builder: (BuildContext context) => 
                         CommunityPage()));
               },
+              // title: Text('Neighborhood'),
+              // onTap: () {
+              //   Navigator.push(
+              //       context,
+              //       MaterialPageRoute(
+              //           builder: (BuildContext context) => 
+              //           NeighborhoodPage()));
+              // },
+              // title: Text('Category'),
+              // onTap: () {
+              //   Navigator.push(
+              //       context,
+              //       MaterialPageRoute(
+              //           builder: (BuildContext context) => 
+              //           CategoryPage()));
+              // },
             )
           ],
         ),
