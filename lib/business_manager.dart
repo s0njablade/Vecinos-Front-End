@@ -7,11 +7,12 @@ class BusinessManager extends StatefulWidget {
   final String firstBusiness;
 
   BusinessManager({this.firstBusiness}) {
-    print('[ProductManager Widget] createState()');
+    print('[ProductManager Widget] Constructor()');
   }
 
   @override
   State<StatefulWidget> createState() {
+    print('[ProductManager Widget] createState()');
     return _BusinessManagerState();
   }
 }
@@ -22,11 +23,10 @@ class _BusinessManagerState extends State<BusinessManager> {
   @override
   void initState() {
     print('[ProductManager State] initState()');
-    if (widget.firstBusiness != null){
-        _businesses.add(widget.firstBusiness);
+    if (widget.firstBusiness != null) {
+      _businesses.add(widget.firstBusiness);
     }
     super.initState();
-
   }
 
   @override

@@ -5,15 +5,13 @@ class ButtonControl extends StatelessWidget {
 
   ButtonControl(this.addBusiness);
 
-@override
-  Widget build(BuildContext context){
-
+  @override
+  Widget build(BuildContext context) {
     return RaisedButton(
         color: Theme.of(context).primaryColor,
         onPressed: () {
           addBusiness('Pies');
         },
-        child: Text('test test')
-    );
-}
+        child: Text('test test'));
+  }
 }
