@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './business_manager.dart';
+import './pages/home.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,12 +13,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blueGrey,
         accentColor: Colors.redAccent
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Vecinos'),
-        ),
-        body: BusinessManager('first business'),
-      ),
+      home: HomePage(),
     );
   }
 }

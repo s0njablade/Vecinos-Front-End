@@ -6,7 +6,7 @@ import './button_control.dart';
 class BusinessManager extends StatefulWidget {
   final String firstBusiness;
 
-  BusinessManager(this.firstBusiness) {
+  BusinessManager({this.firstBusiness}) {
     print('[ProductManager Widget] createState()');
   }
 
@@ -22,8 +22,11 @@ class _BusinessManagerState extends State<BusinessManager> {
   @override
   void initState() {
     print('[ProductManager State] initState()');
+    if (widget.firstBusiness != null){
+        _businesses.add(widget.firstBusiness);
+    }
     super.initState();
-    _businesses.add(widget.firstBusiness);
+
   }
 
   @override
