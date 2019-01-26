@@ -11,7 +11,7 @@ class CategoryPage extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return DefaultTabController(
-      length: 1,
+      length: 3,
       child: Scaffold(
       drawer: Drawer(
         child: Column(
@@ -33,12 +33,13 @@ class CategoryPage extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
-        title: Text('Denver'),
+        title: Text('Categories'),
         bottom: TabBar(
           tabs: <Widget>[
           Tab(
-            icon: Icon(Icons.list),
-            text: 'Select Neighborhood'),
+            text: 'Apperal'),
+            Tab(text: 'Food'),
+            Tab(text: 'Other'),
         ],),
       ),
       body: TabBarView(

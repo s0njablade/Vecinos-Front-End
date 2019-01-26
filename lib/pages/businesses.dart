@@ -40,7 +40,7 @@ class BusinessesPage extends StatelessWidget {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (BuildContext context) => CommunityPage()));
+                        builder: (BuildContext context) => CategoryPage()));
               },
             )
           ],
