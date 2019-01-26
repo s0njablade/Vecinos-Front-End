@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
-import './businesses.dart';
-import './nbusinesses.dart';
+import '../businesses.dart';
+import './poc.dart';
+import './women.dart';
+import './lgbtq.dart';
 
 
-class NeighborhoodPage extends StatelessWidget {
+class CommunityPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
     return DefaultTabController(
-      length: 1,
+      length: 3,
       child: Scaffold(
       drawer: Drawer(
         child: Column(
@@ -31,17 +33,20 @@ class NeighborhoodPage extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
-        title: Text('Denver'),
+        title: Text('Community'),
         bottom: TabBar(
           tabs: <Widget>[
           Tab(
-            icon: Icon(Icons.list),
-            text: 'Select Neighborhood'),
+            text: 'Women Owned'),
+          Tab(text: 'LGTBQ Owned'),
+          Tab(text: 'POC Owned'),
         ],),
       ),
       body: TabBarView(
         children: <Widget>[
-          NBusinessesCreatePage(),
+          WomenCreatePage(),
+          LGBTQCreatePage(),
+          POCCreatePage()
         ],
       ),),
     );

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../business_manager.dart';
-import './community.dart';
-import './neighborhoods.dart';
-import './category.dart';
+import './communities/community.dart';
+import './neighborhoods/neighborhoods.dart';
+import './categories/category.dart';
 
 class BusinessesPage extends StatelessWidget {
   @override
