@@ -19,28 +19,19 @@ class BusinessesPage extends StatelessWidget {
             ListTile(
               title: Text('Community'),
               onTap: () {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (BuildContext context) => CommunityPage()));
+                Navigator.pushReplacementNamed(context,'/community');
               },
             ),
             ListTile(
               title: Text('Neighborhood'),
               onTap: () {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (BuildContext context) => NeighborhoodPage()));
+                Navigator.pushReplacementNamed(context, '/neighborhoods');
               },
             ),
             ListTile(
               title: Text('Category'),
               onTap: () {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (BuildContext context) => CategoryPage()));
+                Navigator.pushReplacementNamed(context, '/categories');
               },
             )
           ],
