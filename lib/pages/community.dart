@@ -52,7 +52,6 @@ class CommunityPage extends StatelessWidget {
         bottom: TabBar(
           tabs: <Widget>[
           Tab(
-            icon: Icon(Icons.),
             text: 'Women Owned'),
           Tab(text: 'LGTBQ Owned'),
           Tab(text: 'POC Owned'),
@@ -62,22 +61,7 @@ class CommunityPage extends StatelessWidget {
         children: <Widget>[
 
         ],
-      ),
-      ),
-    ),);
-    //     body: Center(
-    //       child: RaisedButton(
-    //         child: Text('Back'),
-    //         onPressed: () {
-    //           Navigator.pushReplacement(
-    //             context,
-    //             MaterialPageRoute(
-    //                 builder: (BuildContext context) => BusinessesPage()),
-    //           );
-    //         },
-    //       ),
-    //     ),
-    //   );
-    // }
+      ),),
+    );
   }
 }
