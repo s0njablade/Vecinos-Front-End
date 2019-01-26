@@ -22,25 +22,26 @@ class BusinessesPage extends StatelessWidget {
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                        builder: (BuildContext context) => 
-                        CommunityPage()));
+                        builder: (BuildContext context) => CommunityPage()));
               },
-              // title: Text('Neighborhood'),
-              // onTap: () {
-              //   Navigator.push(
-              //       context,
-              //       MaterialPageRoute(
-              //           builder: (BuildContext context) => 
-              //           NeighborhoodPage()));
-              // },
-              // title: Text('Category'),
-              // onTap: () {
-              //   Navigator.push(
-              //       context,
-              //       MaterialPageRoute(
-              //           builder: (BuildContext context) => 
-              //           CategoryPage()));
-              // },
+            ),
+            ListTile(
+              title: Text('Neighborhood'),
+              onTap: () {
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => NeighborhoodPage()));
+              },
+            ),
+            ListTile(
+              title: Text('Category'),
+              onTap: () {
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => CommunityPage()));
+              },
             )
           ],
         ),
