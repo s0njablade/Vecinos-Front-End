@@ -4,6 +4,6 @@ class WomenCreatePage extends StatelessWidget {
   @override
     Widget build(BuildContext context) {
       
-      return null;
+      return Center(child: Text('Women Owned Business'),);
     }
 }

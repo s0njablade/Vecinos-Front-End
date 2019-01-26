@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import './businesses.dart';
 import './poc.dart';
 import './women.dart';
+import './lgbtq.dart';
 
 
 class CommunityPage extends StatelessWidget {
@@ -59,7 +60,9 @@ class CommunityPage extends StatelessWidget {
       ),
       body: TabBarView(
         children: <Widget>[
-
+          WomenCreatePage(),
+          LGBTQCreatePage(),
+          POCCreatePage()
         ],
       ),),
     );
