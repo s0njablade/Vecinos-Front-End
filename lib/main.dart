@@ -7,26 +7,25 @@ import './pages/categories/category.dart';
 import './pages/business.dart';
 import './pages/businesses.dart';
 
-
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  
   @override
-  State<StatefulWidget>createState(){
+  State<StatefulWidget> createState() {
     return _MyAppState();
   }
 }
-  class _MyAppState extends State<MyApp>{
-    List<Map<String, String>> _businesses = [];
 
-    void _addBusiness(Map<String, String> business) {
-      setState(() {
-        _businesses.add(business);
-      });
-    }
+class _MyAppState extends State<MyApp> {
+  List<Map<String, String>> _businesses = [];
+
+  void _addBusiness(Map<String, String> business) {
+    setState(() {
+      _businesses.add(business);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,27 +38,31 @@ class MyApp extends StatefulWidget {
       ),
       home: AuthPage(),
       routes: {
-        '/businesses':(BuildContext context) => BusinessesPage(_businesses, _addBusiness),
+        '/businesses': (BuildContext context) =>
+            BusinessesPage(_businesses, _addBusiness),
         '/community': (BuildContext context) => CommunityPage(),
         '/neighborhoods': (BuildContext context) => NeighborhoodPage(),
         '/categories': (BuildContext context) => CategoryPage(),
       },
       onGenerateRoute: (RouteSettings settings) {
-        final List<String> pathElements = settings.name.split('/'); 
-        if (pathElements[0] != ''){
+        final List<String> pathElements = settings.name.split('/');
+        if (pathElements[0] != '') {
           return null;
         }
-        if (pathElements[1] == 'business'){
+        if (pathElements[1] == 'business') {
           final int index = int.parse(pathElements[2]);
           return MaterialPageRoute(
             builder: (BuildContext context) => BusinessPage(
-                _businesses[index]['title'],
-                _businesses[index]['image']),
+                _businesses[index]['title'], _businesses[index]['image']),
           );
         }
         return null;
       },
+      onUnknownRoute: (RouteSettings settings) {
+        return MaterialPageRoute(
+            builder: (BuildContext context) =>
+                BusinessesPage(_businesses, _addBusiness));
+      },
     );
   }
 }
-

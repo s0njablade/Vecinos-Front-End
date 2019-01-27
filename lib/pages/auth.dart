@@ -15,7 +15,7 @@ class AuthPage extends StatelessWidget {
           end: Alignment.bottomCenter,
           stops: [0.1, 0.5, 0.7, 0.9],
           colors:[
-            Colors.yellow[300],
+            Colors.orangeAccent[100],
             Colors.yellow[200],
             Colors.teal[100],
             Colors.teal[200]
@@ -29,7 +29,7 @@ class AuthPage extends StatelessWidget {
               Image.asset(
                 'assets/logo.png',
                 width: 350.0,
-                height: 600.0,
+                height: 600.0,            
               ),
               // Container(
               //   padding: EdgeInsets.all(5.0),
