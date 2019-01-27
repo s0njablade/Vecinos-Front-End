@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './businesses.dart';
+
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -9,11 +11,18 @@ class LoginPage extends StatelessWidget {
           title: Text('login'),
         ),
         body: Container(
+          
         margin: EdgeInsets.all(10.0),
         child: ListView(
           children: <Widget>[
-            TextField(),
-            TextField(),
+            TextField(
+              decoration: InputDecoration(labelText: 'Email'),
+              keyboardType: TextInputType.emailAddress,
+            ),
+            TextField(decoration: InputDecoration(labelText: 'Password'),
+            obscureText: true,
+            ),
+            SizedBox(height: 10.0),
             RaisedButton(
             child: Text('Login', style: TextStyle(color: Colors.red[900])),
             elevation: 8.0,
