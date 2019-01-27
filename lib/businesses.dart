@@ -23,16 +23,13 @@ class Businesses extends StatelessWidget {
                 color: Theme.of(context).accentColor,
                 elevation: 8.0,
                 shape: BeveledRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(7.0))),
-                onPressed: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => BusinessPage(
-                            businesses[index]['title'],
-                            businesses[index]['image']),
-                      ),
-                    ),
-              )
+                    borderRadius: BorderRadius.all(Radius.circular(7.0))
+                ),
+                onPressed: (){
+                  Navigator.pushNamed(context, '/business/' + index.toString() );
+                  // .then(bool value){};
+                },
+              ),
             ],
           )
         ],

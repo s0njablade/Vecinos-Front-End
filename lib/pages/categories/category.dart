@@ -50,12 +50,8 @@ class CategoryPage extends StatelessWidget {
               ),
               ListTile(
                 title: Text('All Businesses'),
-                onTap: () {
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (BuildContext context) => BusinessesPage()));
-                },
+                onTap: () { Navigator.pushReplacementNamed(context, '/businesses');
+                }
               )
             ],
           ),

@@ -6,6 +6,11 @@ import '../business_manager.dart';
 // import './categories/category.dart';
 
 class BusinessesPage extends StatelessWidget {
+  final List<Map<String, String>> businesses;
+  final Function addBusiness;
+
+  BusinessesPage(this.businesses, this.addBusiness);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +45,7 @@ class BusinessesPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Vecinos'),
       ),
-      body: BusinessManager(),
+      body: BusinessManager(businesses, addBusiness),
     );
   }
 }

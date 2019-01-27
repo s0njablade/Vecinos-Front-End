@@ -38,7 +38,8 @@ class BusinessPage extends StatelessWidget {
                     shape:BeveledRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(7.0))
                     ),
-                    onPressed: () => Navigator.pop(context),
+                    onPressed: () {Navigator.pushReplacementNamed(context, '/businesses');
+                    },
                   ),
                 )
               ],
