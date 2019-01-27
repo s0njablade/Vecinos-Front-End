@@ -9,7 +9,19 @@ class AuthPage extends StatelessWidget {
         // appBar: AppBar(
         //   title: Text('Login'),
         // ),
-        decoration: new BoxDecoration(color: Colors.teal[200]),
+        decoration: new BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          stops: [0.1, 0.5, 0.7, 0.9],
+          colors:[
+            Colors.yellow[300],
+            Colors.yellow[200],
+            Colors.teal[100],
+            Colors.teal[200]
+          ]
+        ),
+        ),
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -25,7 +37,7 @@ class AuthPage extends StatelessWidget {
               Container(
                 // padding: EdgeInsets.all(1.0),
                 child: RaisedButton(
-                  child: Text('Login'),
+                  child: Text('Login', style: TextStyle(color: Colors.red[900])),
                   elevation: 8.0,
                   shape: BeveledRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(7.0))

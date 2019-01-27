@@ -33,7 +33,11 @@ class BusinessPage extends StatelessWidget {
                   padding: EdgeInsets.all(10.0),
                   child: RaisedButton(
                     color: Theme.of(context).accentColor,
-                    child: Text('Back'),
+                    child: Text('Back', style: TextStyle(color: Colors.red[900])),
+                    elevation: 8.0,
+                    shape:BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(7.0))
+                    ),
                     onPressed: () => Navigator.pop(context),
                   ),
                 )

@@ -18,13 +18,18 @@ class Businesses extends StatelessWidget {
           ButtonBar(
             alignment: MainAxisAlignment.center,
             children: <Widget>[
-              FlatButton(
+              RaisedButton(
                 child: Text('About'),
+                color: Theme.of(context).accentColor,
+                elevation: 8.0,
+                shape: BeveledRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(7.0))),
                 onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (BuildContext context) => BusinessPage(
-                          businesses[index]['title'], businesses[index]['image']),
+                            businesses[index]['title'],
+                            businesses[index]['image']),
                       ),
                     ),
               )
@@ -32,7 +37,7 @@ class Businesses extends StatelessWidget {
           )
         ],
       ),
-    ); 
+    );
   }
 
   Widget _buildBusinessList() {
@@ -42,7 +47,7 @@ class Businesses extends StatelessWidget {
         itemBuilder: _buildBusinessItem,
         itemCount: businesses.length,
       );
-    } else{
+    } else {
       businessCards = Container();
     }
     return businessCards;
