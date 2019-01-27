@@ -6,6 +6,7 @@ import './pages/neighborhoods/neighborhoods.dart';
 import './pages/categories/category.dart';
 import './pages/business.dart';
 import './pages/businesses.dart';
+import './pages/loginPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,6 +39,7 @@ class _MyAppState extends State<MyApp> {
       ),
       home: AuthPage(),
       routes: {
+        '/login': (BuildContext context) => LoginPage(),
         '/businesses': (BuildContext context) =>
             BusinessesPage(_businesses, _addBusiness),
         '/community': (BuildContext context) => CommunityPage(),

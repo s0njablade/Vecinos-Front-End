@@ -44,7 +44,7 @@ class AuthPage extends StatelessWidget {
                   ),
                   color: Theme.of(context).accentColor,
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, '/businesses');
+                    Navigator.pushReplacementNamed(context, '/login');
                   },
                 ),
               )
