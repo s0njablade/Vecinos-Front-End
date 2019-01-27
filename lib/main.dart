@@ -7,6 +7,7 @@ import './pages/categories/category.dart';
 import './pages/business.dart';
 import './pages/businesses.dart';
 import './pages/loginPage.dart';
+import './pages/signup.dart';
 
 void main() {
   runApp(MyApp());
@@ -40,8 +41,8 @@ class _MyAppState extends State<MyApp> {
       home: AuthPage(),
       routes: {
         '/login': (BuildContext context) => LoginPage(),
-        '/businesses': (BuildContext context) =>
-            BusinessesPage(_businesses, _addBusiness),
+        '/signup': (BuildContext context) => SignupPage(),
+        '/businesses': (BuildContext context) =>BusinessesPage(_businesses, _addBusiness),
         '/community': (BuildContext context) => CommunityPage(),
         '/neighborhoods': (BuildContext context) => NeighborhoodPage(),
         '/categories': (BuildContext context) => CategoryPage(),

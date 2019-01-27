@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
 import './businesses.dart';
+import './loginPage.dart';
+import './signup.dart';
 
 class AuthPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-        // appBar: AppBar(
-        //   title: Text('Login'),
-        // ),
         decoration: new BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
@@ -37,7 +36,7 @@ class AuthPage extends StatelessWidget {
               Container(
                 // padding: EdgeInsets.all(1.0),
                 child: RaisedButton(
-                  child: Text('Login', style: TextStyle(color: Colors.red[900])),
+                  child: Text('LOGIN', style: TextStyle(color: Colors.red[900])),
                   elevation: 8.0,
                   shape: BeveledRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(7.0))
@@ -45,6 +44,20 @@ class AuthPage extends StatelessWidget {
                   color: Theme.of(context).accentColor,
                   onPressed: () {
                     Navigator.pushReplacementNamed(context, '/login');
+                  },
+                ),
+              ),
+              Container(
+                // padding: EdgeInsets.all(1.0),
+                child: RaisedButton(
+                  child: Text('SIGN UP', style: TextStyle(color: Colors.red[900])),
+                  elevation: 8.0,
+                  shape: BeveledRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(7.0))
+                  ),
+                  color: Theme.of(context).accentColor,
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, '/signup');
                   },
                 ),
               )

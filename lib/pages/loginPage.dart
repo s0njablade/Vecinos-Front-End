@@ -10,8 +10,16 @@ class LoginPage extends StatelessWidget {
         appBar: AppBar(
           title: Text('login'),
         ),
-        body: Container(
+        body: new Container(
+          decoration: new BoxDecoration(
+          image: new DecorationImage(
+          image: new AssetImage('assets/sidewalk.jpg'),
+          colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.dstATop),
+          fit: BoxFit.cover,
           
+          )
+        ),
+        child: Container(
         margin: EdgeInsets.all(10.0),
         child: ListView(
           children: <Widget>[
@@ -35,6 +43,7 @@ class LoginPage extends StatelessWidget {
               },
             )
           ],
+        )
         )
         )
       );
