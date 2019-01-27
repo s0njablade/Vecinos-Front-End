@@ -14,7 +14,10 @@ class Businesses extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Image.asset(businesses[index]['image']),
-          Text(businesses[index]['title']),
+          Container(
+            margin: EdgeInsets.all(10.0),
+            child: Text(businesses[index]['title'], style: TextStyle(fontSize: 20.0)),
+          ),
           ButtonBar(
             alignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -25,10 +28,11 @@ class Businesses extends StatelessWidget {
                 shape: BeveledRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(7.0))
                 ),
-                onPressed: (){
-                  Navigator.pushNamed(context, '/business/' + index.toString() );
+                onPressed: () =>
+                  Navigator.pushNamed(
+                    context, '/business/' + index.toString() 
+                  )
                   // .then(bool value){};
-                },
               ),
             ],
           )
