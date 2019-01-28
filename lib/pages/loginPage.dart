@@ -27,41 +27,53 @@ class _LoginPageState extends State<LoginPage> {
             )),
             child: Container(
                 margin: EdgeInsets.all(10.0),
-                child: ListView(
-                  children: <Widget>[
-                    TextField(
-                      decoration: InputDecoration(labelText: 'Email'),
-                      keyboardType: TextInputType.emailAddress,
-                      onChanged: (String value) {
-                        setState(() {
-                          _emailValue = value;
-                        });
-                      },
-                    ),
-                    TextField(
-                      decoration: InputDecoration(labelText: 'Password'),
-                      obscureText: true,
-                      onChanged: (String value) {
-                        setState(() {
-                          _passwordValue = value;
-                        });
-                      },
-                    ),
-                    SizedBox(height: 10.0),
-                    RaisedButton(
-                      child: Text('Login',
-                          style: TextStyle(color: Colors.red[900])),
-                      elevation: 8.0,
-                      shape: BeveledRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(7.0))),
-                      color: Theme.of(context).accentColor,
-                      onPressed: () {
-                        print(_emailValue);
-                        print(_passwordValue);
-                        Navigator.pushReplacementNamed(context, '/businesses');
-                      },
-                    )
-                  ],
-                ))));
+                child: Center(
+                  child: SingleChildScrollView(
+                    child: Column(
+                    children: <Widget>[
+                      TextField(
+                        decoration: InputDecoration(labelText: 'Email', filled: true, fillColor: Colors.white70),
+                        keyboardType: TextInputType.emailAddress,
+                        style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+                        onChanged: (String value) {
+                          setState(() {
+                            _emailValue = value;
+                          });
+                        },
+                      ),
+                      SizedBox(height: 10.0),
+                      TextField(
+                        decoration: InputDecoration(labelText: 'Password', filled: true, fillColor: Colors.white70),
+                        obscureText: true,
+                        style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+                        onChanged: (String value) {
+                          setState(() {
+                            _passwordValue = value;
+                          });
+                        },
+                      ),
+                      SizedBox(height: 10.0),
+                      RaisedButton(
+                        child: Text('LOGIN',
+                            style: TextStyle(fontSize: 20.0, color: Colors.red[900])),
+                        elevation: 8.0,
+                        shape: BeveledRectangleBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(7.0))),
+                        color: Theme.of(context).accentColor,
+                        onPressed: () {
+                          print(_emailValue);
+                          print(_passwordValue);
+                          Navigator.pushReplacementNamed(
+                              context, '/businesses');
+                        },
+                      )
+                    ],
+                  ),
+                )
+                )
+              )
+            )
+          );
   }
 }

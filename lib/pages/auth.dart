@@ -36,7 +36,7 @@ class AuthPage extends StatelessWidget {
               Container(
                 // padding: EdgeInsets.all(1.0),
                 child: RaisedButton(
-                  child: Text('LOGIN', style: TextStyle(color: Colors.red[900])),
+                  child: Text('LOGIN', style: TextStyle(fontSize: 20.0, color: Colors.red[900])),
                   elevation: 8.0,
                   shape: BeveledRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(7.0))
@@ -50,7 +50,7 @@ class AuthPage extends StatelessWidget {
               Container(
                 // padding: EdgeInsets.all(1.0),
                 child: RaisedButton(
-                  child: Text('SIGN UP', style: TextStyle(color: Colors.red[900])),
+                  child: Text('SIGN UP', style: TextStyle(fontSize: 20.0, color: Colors.red[900])),
                   elevation: 8.0,
                   shape: BeveledRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(7.0))

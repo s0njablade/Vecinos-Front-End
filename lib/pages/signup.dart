@@ -28,39 +28,47 @@ class _SignupPage extends State<SignupPage> {
             )),
             child: Container(
                 margin: EdgeInsets.all(10.0),
-                child: ListView(
+                child: Center(
+                    child: SingleChildScrollView(
+                        child: Column(
                   children: <Widget>[
                     TextField(
-                      decoration: InputDecoration(labelText: 'Name'),
+                      decoration: InputDecoration(labelText: 'Name', filled: true, fillColor: Colors.white70),
                       keyboardType: TextInputType.text,
+                      style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
                       onChanged: (String value) {
                         setState(() {
                           _nameValue = value;
                         });
                       },
                     ),
+                      SizedBox(height: 10.0),                    
                     TextField(
-                      decoration: InputDecoration(labelText: 'Email'),
+                      decoration: InputDecoration(labelText: 'Email', filled: true, fillColor: Colors.white70),
                       keyboardType: TextInputType.emailAddress,
+                      style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
                       onChanged: (String value) {
                         setState(() {
                           _emailValue = value;
                         });
                       },
                     ),
+                      SizedBox(height: 10.0),                    
                     TextField(
-                      decoration: InputDecoration(labelText: 'Password'),
+                      decoration: InputDecoration(labelText: 'Password', filled: true, fillColor: Colors.white70),
                       obscureText: true,
+                      style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
                       onChanged: (String value) {
                         setState(() {
                           _passwordValue = value;
                         });
                       },
                     ),
+                    
                     SizedBox(height: 10.0),
                     RaisedButton(
-                      child: Text('Create Account',
-                          style: TextStyle(color: Colors.red[900])),
+                      child: Text('CREATE ACCOUNT',
+                          style: TextStyle(fontSize: 20.0, color: Colors.red[900])),
                       elevation: 8.0,
                       shape: BeveledRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(7.0))),
@@ -73,6 +81,11 @@ class _SignupPage extends State<SignupPage> {
                       },
                     )
                   ],
-                ))));
+                )
+              )
+            )
+          )
+        )
+      );
   }
 }

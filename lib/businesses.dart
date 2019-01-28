@@ -16,7 +16,7 @@ class Businesses extends StatelessWidget {
           Image.asset(businesses[index]['image']),
           Container(
             margin: EdgeInsets.all(10.0),
-            child: Text(businesses[index]['title'], style: TextStyle(fontSize: 20.0)),
+            child: Text(businesses[index]['title'], style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold)),
           ),
           ButtonBar(
             alignment: MainAxisAlignment.center,
