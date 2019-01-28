@@ -16,7 +16,7 @@ class _SignupPage extends State<SignupPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('SIGN UP WITH EMAIL'),
+          title: Text('Join the Community'),
         ),
         body: new Container(
             decoration: new BoxDecoration(
@@ -35,7 +35,7 @@ class _SignupPage extends State<SignupPage> {
                     TextField(
                       decoration: InputDecoration(labelText: 'Name', filled: true, fillColor: Colors.white70),
                       keyboardType: TextInputType.text,
-                      style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+                      style: TextStyle(color: Colors.red[900], fontSize: 26.0, fontWeight: FontWeight.bold),
                       onChanged: (String value) {
                         setState(() {
                           _nameValue = value;
@@ -46,7 +46,7 @@ class _SignupPage extends State<SignupPage> {
                     TextField(
                       decoration: InputDecoration(labelText: 'Email', filled: true, fillColor: Colors.white70),
                       keyboardType: TextInputType.emailAddress,
-                      style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+                      style: TextStyle(color: Colors.red[900], fontSize: 26.0, fontWeight: FontWeight.bold),
                       onChanged: (String value) {
                         setState(() {
                           _emailValue = value;
@@ -57,7 +57,7 @@ class _SignupPage extends State<SignupPage> {
                     TextField(
                       decoration: InputDecoration(labelText: 'Password', filled: true, fillColor: Colors.white70),
                       obscureText: true,
-                      style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+                      style: TextStyle(color: Colors.red[900],fontSize: 26.0, fontWeight: FontWeight.bold),
                       onChanged: (String value) {
                         setState(() {
                           _passwordValue = value;
