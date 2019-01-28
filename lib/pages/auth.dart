@@ -47,6 +47,7 @@ class AuthPage extends StatelessWidget {
                   },
                 ),
               ),
+              SizedBox(height: 25.0),              
               Container(
                 // padding: EdgeInsets.all(1.0),
                 child: RaisedButton(

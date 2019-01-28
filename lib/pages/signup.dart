@@ -68,7 +68,7 @@ class _SignupPage extends State<SignupPage> {
                     SizedBox(height: 10.0),
                     RaisedButton(
                       child: Text('CREATE ACCOUNT',
-                          style: TextStyle(fontSize: 20.0, color: Colors.red[900])),
+                      style: TextStyle(fontSize: 20.0, color: Colors.red[900])),
                       elevation: 8.0,
                       shape: BeveledRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(7.0))),

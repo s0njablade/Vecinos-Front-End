@@ -5,8 +5,9 @@ import 'dart:async';
 class BusinessPage extends StatelessWidget {
   final String title;
   final String imageURL;
+  // final String description;
 
-  BusinessPage(this.title, this.imageURL);
+  BusinessPage(this.title, this.imageURL,);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,24 @@ class BusinessPage extends StatelessWidget {
                 Image.asset(imageURL),
                 Container(
                   padding: EdgeInsets.all(10.0),
-                  child: Text(title),
+                  child: Text(title, style: 
+                  TextStyle(
+                    fontSize: 26.0, 
+                    fontWeight: FontWeight.bold)),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                  Text('Capitol Hill, Denver'),
+                  Container(
+                  margin: EdgeInsets.symmetric(horizontal: 5.0),
+                  child: Text('|'),
+                  ),
+                  // Text('Contact Info'),
+                ],),
+                Container(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text('hi, i am a business.', textAlign: TextAlign.center),
                 ),
                 Container(
                   padding: EdgeInsets.all(10.0),
