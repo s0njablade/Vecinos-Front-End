@@ -22,7 +22,8 @@ class Businesses extends StatelessWidget {
             alignment: MainAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
-                child: Text('About'),
+                child: Text('About', 
+                style: TextStyle(fontSize: 20.0, color: Colors.red[900])),
                 color: Theme.of(context).accentColor,
                 elevation: 8.0,
                 shape: BeveledRectangleBorder(
