@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './businesses.dart';
-import './button_control.dart';
+import './business_control.dart';
 
 class BusinessManager extends StatelessWidget {
 //   final Map<String, String> firstBusiness;
@@ -47,7 +47,7 @@ BusinessManager(this.businesses, this.addBusiness);
       children: [
         Container(
           margin: EdgeInsets.all(10.0),
-          child: ButtonControl(addBusiness),
+          child: BusinessControl(addBusiness),
         ),
         Expanded(child: Businesses(businesses))
       ],
