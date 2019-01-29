@@ -40,7 +40,7 @@ flutter:
   assets:
   - assets/city.jpg
   - assets/denver.jpg
-  - assets/logo.png
+  - assets/logo_transparent.png
   - assets/sidewalk.jpg
   - assets/storefront.jpg
 

@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
 import '../business_manager.dart';
+import '../widgets/products/businesses.dart';
+
 // import './communities/community.dart';
 // import './neighborhoods/neighborhoods.dart';
 // import './categories/category.dart';
 
 class BusinessesPage extends StatelessWidget {
-  final List<Map<String, String>> businesses;
-  final Function addBusiness;
+  final List<Map<String, dynamic>> businesses;
 
-  BusinessesPage(this.businesses, this.addBusiness);
+  BusinessesPage(this.businesses);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +46,7 @@ class BusinessesPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Vecinos'),
       ),
-      body: BusinessManager(businesses, addBusiness),
+      body: Businesses(businesses),
     );
   }
 }

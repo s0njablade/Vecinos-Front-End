@@ -8,6 +8,8 @@ import './pages/business.dart';
 import './pages/businesses.dart';
 import './pages/loginPage.dart';
 import './pages/signup.dart';
+import './widgets/products/businesses.dart';
+import './pages/businessList.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,7 +23,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  List<Map<String, String>> _businesses = [];
+  List<Map<String, dynamic>> _businesses = [];
 
   void _addBusiness(Map<String, String> business) {
     setState(() {
@@ -42,7 +44,7 @@ class _MyAppState extends State<MyApp> {
       routes: {
         '/login': (BuildContext context) => LoginPage(),
         '/signup': (BuildContext context) => SignupPage(),
-        '/businesses': (BuildContext context) =>BusinessesPage(_businesses, _addBusiness),
+        '/businesses': (BuildContext context) =>BusinessesPage(_businesses),
         '/community': (BuildContext context) => CommunityPage(),
         '/neighborhoods': (BuildContext context) => NeighborhoodPage(),
         '/categories': (BuildContext context) => CategoryPage(),
@@ -58,7 +60,7 @@ class _MyAppState extends State<MyApp> {
             builder: (BuildContext context) => BusinessPage(
                 _businesses[index]['title'],
                 _businesses[index]['image'],
-                // _businesses[index]['description']
+                _businesses[index]['description']
                 ),
           );
         }
@@ -67,7 +69,7 @@ class _MyAppState extends State<MyApp> {
       onUnknownRoute: (RouteSettings settings) {
         return MaterialPageRoute(
             builder: (BuildContext context) =>
-                BusinessesPage(_businesses, _addBusiness));
+                BusinessesPage(_businesses));
       },
     );
   }
