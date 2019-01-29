@@ -4,8 +4,13 @@ import '../businesses.dart';
 import './nbusinesses.dart';
 import '../communities/community.dart';
 import '../categories/category.dart';
+import '../businessList.dart';
 
 class NeighborhoodPage extends StatelessWidget {
+final List<Map<String, dynamic>> businesses;
+
+  NeighborhoodPage(this.businesses);
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -24,7 +29,7 @@ class NeighborhoodPage extends StatelessWidget {
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => CommunityPage()));
+                          builder: (BuildContext context) => CommunityPage(businesses)));
                 },
               ),
               ListTile(
@@ -34,7 +39,7 @@ class NeighborhoodPage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                           builder: (BuildContext context) =>
-                              NeighborhoodPage()));
+                              NeighborhoodPage(businesses)));
                 },
               ),
               ListTile(
@@ -43,7 +48,7 @@ class NeighborhoodPage extends StatelessWidget {
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => CategoryPage()));
+                          builder: (BuildContext context) => CategoryPage(businesses)));
                 },
               ),
               ListTile(
@@ -64,7 +69,7 @@ class NeighborhoodPage extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
-            NBusinessesCreatePage(),
+            BusinessListPage(businesses),
           ],
         ),
       ),

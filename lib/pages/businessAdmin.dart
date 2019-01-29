@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../businesses.dart';
-import './poc.dart';
-import './women.dart';
-import './lgbtq.dart';
-import '../neighborhoods/neighborhoods.dart';
-import '../categories/category.dart';
+// import '../businesses.dart';
+import './communities/community.dart';
+import './neighborhoods/neighborhoods.dart';
+import './categories/category.dart';
+import './businessList.dart';
 
-class CommunityPage extends StatelessWidget {
+class BusinessAdmin extends StatelessWidget {
 
 final List<Map<String, dynamic>> businesses;
 
-  CommunityPage(this.businesses);
+  BusinessAdmin(this.businesses);
 
   @override
   Widget build(BuildContext context) {
@@ -63,20 +62,11 @@ final List<Map<String, dynamic>> businesses;
           ),
         ),
         appBar: AppBar(
-          title: Text('Community'),
-          bottom: TabBar(
-            tabs: <Widget>[
-              Tab(text: 'Women Owned'),
-              Tab(text: 'LGTBQ Owned'),
-              Tab(text: 'POC Owned'),
-            ],
-          ),
+          title: Text('Vecinos'),
         ),
         body: TabBarView(
           children: <Widget>[
-            WomenCreatePage(),
-            LGBTQCreatePage(),
-            POCCreatePage()
+            BusinessListPage(businesses),
           ],
         ),
       ),

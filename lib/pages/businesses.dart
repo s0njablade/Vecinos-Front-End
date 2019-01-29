@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../business_manager.dart';
 import '../widgets/products/businesses.dart';
+import './businessList.dart';
 
 // import './communities/community.dart';
 // import './neighborhoods/neighborhoods.dart';
@@ -46,7 +47,7 @@ class BusinessesPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Vecinos'),
       ),
-      body: Businesses(businesses),
+      body: BusinessListPage(businesses),
     );
   }
 }

@@ -10,6 +10,7 @@ import './pages/loginPage.dart';
 import './pages/signup.dart';
 import './widgets/products/businesses.dart';
 import './pages/businessList.dart';
+import './pages/businessAdmin.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,7 +26,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   List<Map<String, dynamic>> _businesses = [];
 
-  void _addBusiness(Map<String, String> business) {
+  void businessListPage(Map<String, String> business) {
     setState(() {
       _businesses.add(business);
     });
@@ -44,10 +45,10 @@ class _MyAppState extends State<MyApp> {
       routes: {
         '/login': (BuildContext context) => LoginPage(),
         '/signup': (BuildContext context) => SignupPage(),
-        '/businesses': (BuildContext context) =>BusinessesPage(_businesses),
-        '/community': (BuildContext context) => CommunityPage(),
-        '/neighborhoods': (BuildContext context) => NeighborhoodPage(),
-        '/categories': (BuildContext context) => CategoryPage(),
+        '/businesses': (BuildContext context) => BusinessAdmin(_businesses),
+        '/community': (BuildContext context) => CommunityPage(_businesses),
+        '/neighborhoods': (BuildContext context) => NeighborhoodPage(_businesses),
+        '/categories': (BuildContext context) => CategoryPage(_businesses),
       },
       onGenerateRoute: (RouteSettings settings) {
         final List<String> pathElements = settings.name.split('/');

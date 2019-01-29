@@ -8,6 +8,11 @@ import '../neighborhoods/neighborhoods.dart';
 import '../communities/community.dart';
 
 class CategoryPage extends StatelessWidget {
+
+final List<Map<String, dynamic>> businesses;
+
+CategoryPage(this.businesses);
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -26,7 +31,7 @@ class CategoryPage extends StatelessWidget {
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => CommunityPage()));
+                          builder: (BuildContext context) => CommunityPage(businesses)));
                 },
               ),
               ListTile(
@@ -36,7 +41,7 @@ class CategoryPage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                           builder: (BuildContext context) =>
-                              NeighborhoodPage()));
+                              NeighborhoodPage(businesses)));
                 },
               ),
               ListTile(
@@ -45,7 +50,7 @@ class CategoryPage extends StatelessWidget {
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => CategoryPage()));
+                          builder: (BuildContext context) => CategoryPage(businesses)));
                 },
               ),
               ListTile(
