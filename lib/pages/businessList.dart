@@ -83,4 +83,3 @@ class BusinessListPage extends StatelessWidget {
 //       );
   }
 
-  /Users/sonjachacon/Desktop/flutterTest/secondapp/v2/vecinos/lib/pages/businessList.dart
