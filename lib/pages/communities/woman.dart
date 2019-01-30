@@ -8,6 +8,7 @@ class WomanPage extends StatelessWidget {
             title: Text('Women Owned Business'),
             ),
         body: new Card(
+            elevation: 8.0,
             child: new Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
