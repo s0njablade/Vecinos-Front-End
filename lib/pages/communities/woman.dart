@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 
-class ApperalCreatePage extends StatelessWidget {
+class WomanPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Apperal'),
-        ),
+            title: Text('Women Owned Business'),
+            ),
         body: new Card(
             child: new Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-              Image.asset('assets/storefront.jpg'),
+              Image.asset('assets/azucar.jpg'),
               Container(
                 padding: EdgeInsets.all(10.0),
-                child: Text('Sterre'),
+                child: Text('Azucar'),
               ),
-              Text('Stapleton, Denver'),
+              Text('Five Points, Denver'),
               Container(
                 padding: EdgeInsets.all(10.0),
                 child: Text(
-                    'Inspired by the independent boutiques of Europe and the travels of founder Danielle van Ede, Sterre offers a rotating selection of quality items for fashion-forward women.',
+                    'As a local family-owned business we’re not just your favorite bakery, we’re your neighbors.',
                     textAlign: TextAlign.center),
               ),
               Container(

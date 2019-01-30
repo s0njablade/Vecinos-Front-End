@@ -34,7 +34,7 @@ class WomenCreatePage extends StatelessWidget {
                     shape: BeveledRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(7.0))),
                     onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/businesses');
+                      Navigator.pushReplacementNamed(context, '/woman');
                     },
                   ),)
               ]

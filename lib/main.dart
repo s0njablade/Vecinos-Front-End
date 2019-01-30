@@ -11,6 +11,7 @@ import './pages/signup.dart';
 import './widgets/products/businesses.dart';
 import './pages/businessList.dart';
 import './pages/businessAdmin.dart';
+import './pages/communities/woman.dart';
 
 void main() {
   runApp(MyApp());
@@ -47,6 +48,7 @@ class _MyAppState extends State<MyApp> {
         '/signup': (BuildContext context) => SignupPage(),
         '/businesses': (BuildContext context) => BusinessAdmin(businesses),
         '/community': (BuildContext context) => CommunityPage(businesses),
+        '/woman':(BuildContext context) => WomanPage(),
         '/neighborhoods': (BuildContext context) => NeighborhoodPage(businesses),
         '/categories': (BuildContext context) => CategoryPage(businesses),
       },
