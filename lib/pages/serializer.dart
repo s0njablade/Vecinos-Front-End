@@ -19,7 +19,5 @@ class Business {
   final String description;
 
 
-
-
 }
 

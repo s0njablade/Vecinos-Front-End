@@ -13,6 +13,8 @@ import './pages/businessList.dart';
 import './pages/businessAdmin.dart';
 import './pages/communities/woman.dart';
 import './pages/neighborhoods/nbusinesses.dart';
+import './pages/save.dart';
+import './pages/serializer.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,13 +28,13 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  List<Map<String, dynamic>> businesses = [];
+  // List<Map<String, dynamic>> businesses = [];
 
-  void businessListPage(Map<String, String> business) {
-    setState(() {
-      businesses.add(business);
-    });
-  }
+  // void businessListPage(Map<String, String> business) {
+  //   setState(() {
+  //     businesses.add(business);
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -53,31 +55,33 @@ class _MyAppState extends State<MyApp> {
         '/neighborhoods': (BuildContext context) => NeighborhoodPage(businesses),
         '/neighborhood':(BuildContext context) => NBusinessesCreatePage(),
         '/categories': (BuildContext context) => CategoryPage(businesses),
-      },
-      onGenerateRoute: (RouteSettings settings) {
-        final List<String> pathElements = settings.name.split('/');
-        if (pathElements[0] != '') {
-          return null;
-        }
-        if (pathElements[1] == 'business') {
-          final int index = int.parse(pathElements[2]);
-          return MaterialPageRoute(
-            builder: (BuildContext context) => BusinessPage(
-                businesses[index]['title'],
-                businesses[index]['image'],
-                businesses[index]['description']
-                ),
-          );
-        }
-        return null;
+      }
+      // onGenerateRoute: (RouteSettings settings) {
+      //   final List<String> pathElements = settings.name.split('/');
+      //   if (pathElements[0] != '') {
+      //     return null;
+      //   }
+      //   if (pathElements[1] == 'business') {
+      //     final int index = int.parse(pathElements[2]);
+      //     return MaterialPageRoute(
+      //       builder: (BuildContext context) => BusinessPage(
+      //           businesses[index]['title'],
+      //           businesses[index]['image'],
+      //           businesses[index]['description']
+      //           ),
+      //     );
+      //   }
+      //   return null;
 
         
-      },
-      onUnknownRoute: (RouteSettings settings) {
-        return MaterialPageRoute(
-            builder: (BuildContext context) =>
-                BusinessesPage(businesses));
-      },
+  //     },
+  //     onUnknownRoute: (RouteSettings settings) {
+  //       return MaterialPageRoute(
+  //           builder: (BuildContext context) =>
+  //               BusinessesPage(businesses));
+  //     },
+  //   );
+  // }
     );
-  }
+    }
 }

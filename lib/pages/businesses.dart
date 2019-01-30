@@ -9,9 +9,9 @@ import './businessList.dart';
 // import './categories/category.dart';
 
 class BusinessesPage extends StatelessWidget {
-  final List<Map<String, dynamic>> businesses;
+  // final List<Map<String, dynamic>> businesses;
 
-  BusinessesPage(this.businesses);
+  // BusinessesPage(this.businesses);
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +45,9 @@ class BusinessesPage extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
-        title: Text('Featured'),
+        title: Text('Vecinos'),
       ),
-      body: BusinessListPage(businesses),
+      body: MainListPage(),
     );
   }
 }

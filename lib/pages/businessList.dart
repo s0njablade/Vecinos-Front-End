@@ -1,59 +1,82 @@
 import 'package:flutter/material.dart';
 
-import './businesses.dart';
-import './business.dart';
-
-// import './'
+import './save.dart';
+import './serializer.dart';
 
 
+class MainListPage extends StatelessWidget {
+  List<Card> _buildList(BuildContext context){
+    List<Business> businesses = BusinessesRepo.loadBusiness();
 
-class BusinessListPage extends StatelessWidget {
-  final List<Map<String, dynamic>> businesses;
+  if (businesses == null || businesses.isEmpty){
+    return const <Card>[];
+  }
 
-  BusinessListPage(this.businesses);
+    return businesses.map((business){
+        return Card(
+          clipBehavior: Clip.antiAlias,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              AspectRatio(
+                aspectRatio: 18/11,
+                child: Image.asset(business.image),
+                
+              ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(16.0,12.0,16.0,8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        business.title,
+                        maxLines: 1,
+                      ),
+                      SizedBox(height: 8.0,),
+                      Text(
+                        business.description,
+                        maxLines: 2,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+    }
+              ).toList();
+  };
 
 
-@override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // appBar: AppBar(
-        //   // title: Text('Featured'),
-        // ),
-    body: new Card(
-      child: new Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-                Image.asset('assets/storefront.jpg'),
-                Container(
-                  padding: EdgeInsets.all(10.0),
-                  child: 
-                  Text('Pandora on the Hill', style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),),
-                ),
-                Text('Capitol Hill, Denver'),
-
-                Container(
-                  padding: EdgeInsets.all(10.0),
-                  child:
-                      Text('We truly are locals who love locals locally.', textAlign: TextAlign.center),
-                ),
-                Container(
-                  padding: EdgeInsets.all(10.0),
-                  child: RaisedButton(
-                    color: Theme.of(context).accentColor,
-                    child:
-                        Text('About', style: TextStyle(color: Colors.red[900])),
-                    elevation: 8.0,
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(7.0))),
-                    onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/businesses');
-                    },
-                  ),)
-              ]
-              ))
-              );
-  
+      appBar: AppBar(
+      automaticallyImplyLeading: false,
+      title: Text('Filter'),
+      ),
+      body: Center(
+        child: GridView.count(
+          crossAxisCount: 2,
+          padding: EdgeInsets.all(16.0),
+          childAspectRatio: 8.0 / 9.0,
+          children: _buildList(context),
+        ),
+      ),
+    );
   }
+}
+  
+
+
+
+  // BusinessListPage(this.businesses);
+
+
+// @override
+  
 
 //   @override
 //   Widget build(BuildContext context) {
@@ -81,5 +104,3 @@ class BusinessListPage extends StatelessWidget {
 //       }, 
 //       itemCount: businesses.length,
 //       );
-  }
-

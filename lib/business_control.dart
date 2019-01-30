@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-class BusinessControl extends StatelessWidget {
-  final Function business;
+// class BusinessControl extends StatelessWidget {
+//   final Function business;
 
-  BusinessControl(this.business);
+//   BusinessControl(this.business);
 
-  @override
+  // @override
   // Widget build(BuildContext context) {
   //   return Scaffold(
   //       appBar: AppBar(

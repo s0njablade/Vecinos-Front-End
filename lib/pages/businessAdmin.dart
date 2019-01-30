@@ -66,7 +66,7 @@ final List<Map<String, dynamic>> businesses;
         ),
         body: TabBarView(
           children: <Widget>[
-            BusinessListPage(businesses),
+            MainListPage(),
           ],
         ),
       ),
