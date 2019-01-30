@@ -21,37 +21,50 @@ class MainListPageState extends State<MainListPage> {
 
     return businesses.map((business){
         return Card(
-          clipBehavior: Clip.antiAlias,
+          // clipBehavior: Clip.antiAlias,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              AspectRatio(
-                aspectRatio: 18/11,
-                child: Image.asset(business.image),
-                
-              ),
-              Expanded(
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(16.0,12.0,16.0,8.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
+              Image.asset(business.image),
+              Container(
+                padding: EdgeInsets.all(10.0),
+                child:Text(
                         business.title,
-                        maxLines: 1,
+                        style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold)
                       ),
-                      SizedBox(height: 8.0,),
-                      Text(
-                        business.description,
-                        maxLines: 2,
-                      ),
-                    ],
-                  ),
-                ),
+                // child: Image.asset(business.image),
               ),
-            ],
-          ),
-        );
+              // Expanded(
+              //   child: Padding(
+              //     padding: EdgeInsets.fromLTRB(16.0,12.0,16.0,8.0),
+              //     child: Column(
+              //       crossAxisAlignment: CrossAxisAlignment.start,
+              //       children: <Widget>[
+              //         Text(
+              //           business.title,
+              //           maxLines: 1,
+              //         ),
+              //         SizedBox(height: 8.0,),
+              // Container(
+              //   padding: EdgeInsets.all(10.0),
+              //   child: Text(
+              //       'As a locally owned business we’re not just your favorite bistro, we’re your neighbors.',
+              //       textAlign: TextAlign.center),
+              // ),
+              // Container(
+              //   padding: EdgeInsets.all(10.0),
+              //   child: RaisedButton(
+              //     color: Theme.of(context).accentColor,
+              //     child:
+              //         Text('About', style: TextStyle(color: Colors.red[900])),
+              //     elevation: 8.0,
+              //     shape: BeveledRectangleBorder(
+              //         borderRadius: BorderRadius.all(Radius.circular(7.0))),
+              //     onPressed: () {
+              //       Navigator.pushReplacementNamed(context, '/businesses');
+              //     },
+              //   ),
+            ]));
     }
               ).toList();
   }
@@ -59,15 +72,14 @@ class MainListPageState extends State<MainListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-      automaticallyImplyLeading: false,
-      // title: Text('Vecinos'),
-      ),
+      // appBar: AppBar(
+      // automaticallyImplyLeading: false,
+      // // title: Text('Vecinos'),
+      // ),
       body: Center(
         child: GridView.count(
-          crossAxisCount: 2,
-          padding: EdgeInsets.all(16.0),
-          childAspectRatio: 8.0 / 9.0,
+          crossAxisCount: 1,
+          padding: EdgeInsets.all(10.0),
           children: _buildList(context),
         ),
       ),
