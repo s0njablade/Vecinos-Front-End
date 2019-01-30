@@ -11,13 +11,13 @@ class WomenCreatePage extends StatelessWidget {
       child: new Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-                Image.asset('assets/denver.jpg'),
+                Image.asset('assets/Olive-Finch_0.jpg'),
                 Container(
                   padding: EdgeInsets.all(10.0),
                   child: 
-                  Text('Welton St Cafe'),
+                  Text('Olive & Finch'),
                 ),
-                Text('Capitol Hill, Denver'),
+                Text('At Olive & Finch our focus is scratch-made food.'),
 
                 Container(
                   padding: EdgeInsets.all(10.0),
@@ -44,4 +44,3 @@ class WomenCreatePage extends StatelessWidget {
   }
 
     }
-}

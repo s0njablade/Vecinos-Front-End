@@ -11,18 +11,18 @@ class LGBTQCreatePage extends StatelessWidget {
       child: new Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-                Image.asset('assets/denver.jpg'),
+                Image.asset('assets/protos.jpg'),
                 Container(
                   padding: EdgeInsets.all(10.0),
                   child: 
-                  Text('Welton St Cafe'),
+                  Text("Proto's Pizza"),
                 ),
-                Text('Capitol Hill, Denver'),
+                Text('Lohi, Denver'),
 
                 Container(
                   padding: EdgeInsets.all(10.0),
                   child:
-                      Text('Soul food, Carribean Food', textAlign: TextAlign.center),
+                      Text('The Pizza experience had been elevated to table service, linen napkins, and delicious wines with a full bar to make it a true dining experience.', textAlign: TextAlign.center),
                 ),
                 Container(
                   padding: EdgeInsets.all(10.0),
