@@ -11,16 +11,16 @@ class WomanPage extends StatelessWidget {
             child: new Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-              Image.asset('assets/azucar.jpg'),
+              Image.asset('assets/Olive-Finch_0.jpg'),
               Container(
                 padding: EdgeInsets.all(10.0),
-                child: Text('Azucar', style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),),
+                child: Text('Olive & Finch', style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),),
               ),
-              Text('Five Points, Denver'),
+              Text('Cherry Creek, Denver'),
               Container(
                 padding: EdgeInsets.all(10.0),
                 child: Text(
-                    'As a local family-owned business we’re not just your favorite bakery, we’re your neighbors.',
+                    'As a locally owned business we’re not just your favorite bistro, we’re your neighbors.',
                     textAlign: TextAlign.center),
               ),
               Container(

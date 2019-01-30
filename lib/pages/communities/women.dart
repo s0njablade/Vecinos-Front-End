@@ -17,12 +17,12 @@ class WomenCreatePage extends StatelessWidget {
                   child: 
                   Text('Olive & Finch', style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),),
                 ),
-                Text('At Olive & Finch our focus is scratch-made food.'),
+                Text('Cherry Creek, Denver'),
 
                 Container(
                   padding: EdgeInsets.all(10.0),
                   child:
-                      Text('Soul food, Carribean Food', textAlign: TextAlign.center),
+                      Text('As a locally owned business we’re not just your favorite bistro, we’re your neighbors.', textAlign: TextAlign.center),
                 ),
                 Container(
                   padding: EdgeInsets.all(10.0),
