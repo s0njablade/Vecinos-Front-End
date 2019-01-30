@@ -63,13 +63,13 @@ final List<Map<String, dynamic>> businesses;
           title: Text('Denver'),
           bottom: TabBar(
             tabs: <Widget>[
-              Tab(icon: Icon(Icons.list), text: 'Select Neighborhood'),
+              Tab(text: 'Select Neighborhood', icon: Icon(Icons.arrow_drop_down)),
             ],
           ),
         ),
         body: TabBarView(
           children: <Widget>[
-            BusinessListPage(businesses),
+            NBusinessesCreatePage(),
           ],
         ),
       ),

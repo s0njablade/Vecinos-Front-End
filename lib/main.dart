@@ -12,6 +12,7 @@ import './widgets/products/businesses.dart';
 import './pages/businessList.dart';
 import './pages/businessAdmin.dart';
 import './pages/communities/woman.dart';
+import './pages/neighborhoods/nbusinesses.dart';
 
 void main() {
   runApp(MyApp());
@@ -50,6 +51,7 @@ class _MyAppState extends State<MyApp> {
         '/community': (BuildContext context) => CommunityPage(businesses),
         '/woman':(BuildContext context) => WomanPage(),
         '/neighborhoods': (BuildContext context) => NeighborhoodPage(businesses),
+        '/neighborhood':(BuildContext context) => NBusinessesCreatePage(),
         '/categories': (BuildContext context) => CategoryPage(businesses),
       },
       onGenerateRoute: (RouteSettings settings) {
