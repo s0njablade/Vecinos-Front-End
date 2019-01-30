@@ -14,7 +14,7 @@ class WomanPage extends StatelessWidget {
               Image.asset('assets/azucar.jpg'),
               Container(
                 padding: EdgeInsets.all(10.0),
-                child: Text('Azucar'),
+                child: Text('Azucar', style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),),
               ),
               Text('Five Points, Denver'),
               Container(

@@ -15,7 +15,7 @@ class POCCreatePage extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(10.0),
                   child: 
-                  Text('Welton St Cafe'),
+                  Text('Welton St Cafe', style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),),
                 ),
                 Text('Five Points, Denver'),
 

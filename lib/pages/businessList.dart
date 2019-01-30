@@ -23,18 +23,18 @@ class BusinessListPage extends StatelessWidget {
       child: new Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-                Image.asset('assets/denver.jpg'),
+                Image.asset('assets/storefront.jpg'),
                 Container(
                   padding: EdgeInsets.all(10.0),
                   child: 
-                  Text('Welton St Cafe'),
+                  Text('Pandora on the Hill', style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),),
                 ),
                 Text('Capitol Hill, Denver'),
 
                 Container(
                   padding: EdgeInsets.all(10.0),
                   child:
-                      Text('Soul food, Carribean Food', textAlign: TextAlign.center),
+                      Text('We truly are locals who love locals locally.', textAlign: TextAlign.center),
                 ),
                 Container(
                   padding: EdgeInsets.all(10.0),

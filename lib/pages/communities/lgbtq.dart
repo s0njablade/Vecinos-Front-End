@@ -15,7 +15,7 @@ class LGBTQCreatePage extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(10.0),
                   child: 
-                  Text("Proto's Pizza"),
+                  Text("Proto's Pizza", style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),),
                 ),
                 Text('Lohi, Denver'),
 

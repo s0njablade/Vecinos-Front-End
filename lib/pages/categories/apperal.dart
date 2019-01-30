@@ -14,7 +14,7 @@ class ApperalCreatePage extends StatelessWidget {
               Image.asset('assets/storefront.jpg'),
               Container(
                 padding: EdgeInsets.all(10.0),
-                child: Text('Sterre'),
+                child: Text('Sterre', style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),),
               ),
               Text('Stapleton, Denver'),
               Container(

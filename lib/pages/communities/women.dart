@@ -15,7 +15,7 @@ class WomenCreatePage extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(10.0),
                   child: 
-                  Text('Olive & Finch'),
+                  Text('Olive & Finch', style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),),
                 ),
                 Text('At Olive & Finch our focus is scratch-made food.'),
 
