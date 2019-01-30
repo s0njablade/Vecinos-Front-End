@@ -24,11 +24,11 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  List<Map<String, dynamic>> _businesses = [];
+  List<Map<String, dynamic>> businesses = [];
 
   void businessListPage(Map<String, String> business) {
     setState(() {
-      _businesses.add(business);
+      businesses.add(business);
     });
   }
 
@@ -45,10 +45,10 @@ class _MyAppState extends State<MyApp> {
       routes: {
         '/login': (BuildContext context) => LoginPage(),
         '/signup': (BuildContext context) => SignupPage(),
-        '/businesses': (BuildContext context) => BusinessAdmin(_businesses),
-        '/community': (BuildContext context) => CommunityPage(_businesses),
-        '/neighborhoods': (BuildContext context) => NeighborhoodPage(_businesses),
-        '/categories': (BuildContext context) => CategoryPage(_businesses),
+        '/businesses': (BuildContext context) => BusinessAdmin(businesses),
+        '/community': (BuildContext context) => CommunityPage(businesses),
+        '/neighborhoods': (BuildContext context) => NeighborhoodPage(businesses),
+        '/categories': (BuildContext context) => CategoryPage(businesses),
       },
       onGenerateRoute: (RouteSettings settings) {
         final List<String> pathElements = settings.name.split('/');
@@ -59,18 +59,20 @@ class _MyAppState extends State<MyApp> {
           final int index = int.parse(pathElements[2]);
           return MaterialPageRoute(
             builder: (BuildContext context) => BusinessPage(
-                _businesses[index]['title'],
-                _businesses[index]['image'],
-                _businesses[index]['description']
+                businesses[index]['title'],
+                businesses[index]['image'],
+                businesses[index]['description']
                 ),
           );
         }
         return null;
+
+        
       },
       onUnknownRoute: (RouteSettings settings) {
         return MaterialPageRoute(
             builder: (BuildContext context) =>
-                BusinessesPage(_businesses));
+                BusinessesPage(businesses));
       },
     );
   }

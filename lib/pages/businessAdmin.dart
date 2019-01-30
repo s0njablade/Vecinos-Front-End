@@ -62,7 +62,7 @@ final List<Map<String, dynamic>> businesses;
           ),
         ),
         appBar: AppBar(
-          title: Text('Vecinos'),
+          title: Text('Featured'),
         ),
         body: TabBarView(
           children: <Widget>[

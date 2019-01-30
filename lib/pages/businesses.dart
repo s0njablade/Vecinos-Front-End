@@ -45,7 +45,7 @@ class BusinessesPage extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
-        title: Text('Vecinos'),
+        title: Text('Featured'),
       ),
       body: BusinessListPage(businesses),
     );
