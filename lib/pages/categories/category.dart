@@ -9,9 +9,9 @@ import '../communities/community.dart';
 
 class CategoryPage extends StatelessWidget {
 
-final List<Map<String, dynamic>> businesses;
+// final List<Map<String, dynamic>> businesses;
 
-CategoryPage(this.businesses);
+// CategoryPage(this.businesses);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ CategoryPage(this.businesses);
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => CommunityPage(businesses)));
+                          builder: (BuildContext context) => CommunityPage()));
                 },
               ),
               ListTile(
@@ -41,7 +41,7 @@ CategoryPage(this.businesses);
                       context,
                       MaterialPageRoute(
                           builder: (BuildContext context) =>
-                              NeighborhoodPage(businesses)));
+                              NeighborhoodPage()));
                 },
               ),
               ListTile(
@@ -50,7 +50,7 @@ CategoryPage(this.businesses);
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => CategoryPage(businesses)));
+                          builder: (BuildContext context) => CategoryPage()));
                 },
               ),
               ListTile(

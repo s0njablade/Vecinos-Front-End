@@ -28,13 +28,13 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // List<Map<String, dynamic>> businesses = [];
+  List<Map<String, dynamic>> businesses = [];
 
-  // void businessListPage(Map<String, String> business) {
-  //   setState(() {
-  //     businesses.add(business);
-  //   });
-  // }
+  void businessListPage(Map<String, dynamic> business) {
+    setState(() {
+      businesses.add(business);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,12 +49,12 @@ class _MyAppState extends State<MyApp> {
       routes: {
         '/login': (BuildContext context) => LoginPage(),
         '/signup': (BuildContext context) => SignupPage(),
-        '/businesses': (BuildContext context) => BusinessAdmin(businesses),
-        '/community': (BuildContext context) => CommunityPage(businesses),
+        '/businesses': (BuildContext context) => BusinessAdmin(),
+        '/community': (BuildContext context) => CommunityPage(),
         '/woman':(BuildContext context) => WomanPage(),
-        '/neighborhoods': (BuildContext context) => NeighborhoodPage(businesses),
+        '/neighborhoods': (BuildContext context) => NeighborhoodPage(),
         '/neighborhood':(BuildContext context) => NBusinessesCreatePage(),
-        '/categories': (BuildContext context) => CategoryPage(businesses),
+        '/categories': (BuildContext context) => CategoryPage(),
       }
       // onGenerateRoute: (RouteSettings settings) {
       //   final List<String> pathElements = settings.name.split('/');

@@ -8,9 +8,9 @@ import './businessList.dart';
 
 class BusinessAdmin extends StatelessWidget {
 
-final List<Map<String, dynamic>> businesses;
+// final List<Map<String, dynamic>> businesses;
 
-  BusinessAdmin(this.businesses);
+  // BusinessAdmin(this.businesses);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ final List<Map<String, dynamic>> businesses;
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => CommunityPage(businesses)));
+                          builder: (BuildContext context) => CommunityPage()));
                 },
               ),
               ListTile(
@@ -40,7 +40,7 @@ final List<Map<String, dynamic>> businesses;
                       context,
                       MaterialPageRoute(
                           builder: (BuildContext context) =>
-                              NeighborhoodPage(businesses)));
+                              NeighborhoodPage()));
                 },
               ),
               ListTile(
@@ -49,7 +49,7 @@ final List<Map<String, dynamic>> businesses;
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => CategoryPage(businesses)));
+                          builder: (BuildContext context) => CategoryPage()));
                 },
               ),
               ListTile(
@@ -62,7 +62,7 @@ final List<Map<String, dynamic>> businesses;
           ),
         ),
         appBar: AppBar(
-          title: Text('Featured'),
+          title: Text('Vecinos'),
         ),
         body: TabBarView(
           children: <Widget>[

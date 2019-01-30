@@ -7,9 +7,9 @@ import '../categories/category.dart';
 import '../businessList.dart';
 
 class NeighborhoodPage extends StatelessWidget {
-final List<Map<String, dynamic>> businesses;
+// final List<Map<String, dynamic>> businesses;
 
-  NeighborhoodPage(this.businesses);
+  // NeighborhoodPage(this.businesses);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ final List<Map<String, dynamic>> businesses;
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => CommunityPage(businesses)));
+                          builder: (BuildContext context) => CommunityPage()));
                 },
               ),
               ListTile(
@@ -39,7 +39,7 @@ final List<Map<String, dynamic>> businesses;
                       context,
                       MaterialPageRoute(
                           builder: (BuildContext context) =>
-                              NeighborhoodPage(businesses)));
+                              NeighborhoodPage()));
                 },
               ),
               ListTile(
@@ -48,7 +48,7 @@ final List<Map<String, dynamic>> businesses;
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => CategoryPage(businesses)));
+                          builder: (BuildContext context) => CategoryPage()));
                 },
               ),
               ListTile(

@@ -4,7 +4,14 @@ import './save.dart';
 import './serializer.dart';
 
 
-class MainListPage extends StatelessWidget {
+class MainListPage extends StatefulWidget {
+  @override
+  MainListPageState createState() {
+    return new MainListPageState();
+  }
+}
+
+class MainListPageState extends State<MainListPage> {
   List<Card> _buildList(BuildContext context){
     List<Business> businesses = BusinessesRepo.loadBusiness();
 
@@ -47,15 +54,14 @@ class MainListPage extends StatelessWidget {
         );
     }
               ).toList();
-  };
-
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
       automaticallyImplyLeading: false,
-      title: Text('Filter'),
+      // title: Text('Vecinos'),
       ),
       body: Center(
         child: GridView.count(
