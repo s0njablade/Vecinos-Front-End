@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import './communities/community.dart';
 import './neighborhoods/neighborhoods.dart';
 import './categories/category.dart';
