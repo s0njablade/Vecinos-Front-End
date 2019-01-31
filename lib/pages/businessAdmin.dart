@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 
-// import '../businesses.dart';
+
 import './communities/community.dart';
 import './neighborhoods/neighborhoods.dart';
 import './categories/category.dart';
 import './businessList.dart';
 
 class BusinessAdmin extends StatelessWidget {
-
-// final List<Map<String, dynamic>> businesses;
-
-  // BusinessAdmin(this.businesses);
 
   @override
   Widget build(BuildContext context) {

@@ -4,11 +4,9 @@ import './pages/auth.dart';
 import './pages/communities/community.dart';
 import './pages/neighborhoods/neighborhoods.dart';
 import './pages/categories/category.dart';
-import './pages/business.dart';
 import './pages/businesses.dart';
 import './pages/loginPage.dart';
 import './pages/signup.dart';
-import './widgets/products/businesses.dart';
 import './pages/businessList.dart';
 import './pages/businessAdmin.dart';
 import './pages/communities/woman.dart';
@@ -56,32 +54,7 @@ class _MyAppState extends State<MyApp> {
         '/neighborhood':(BuildContext context) => NBusinessesCreatePage(),
         '/categories': (BuildContext context) => CategoryPage(),
       }
-      // onGenerateRoute: (RouteSettings settings) {
-      //   final List<String> pathElements = settings.name.split('/');
-      //   if (pathElements[0] != '') {
-      //     return null;
-      //   }
-      //   if (pathElements[1] == 'business') {
-      //     final int index = int.parse(pathElements[2]);
-      //     return MaterialPageRoute(
-      //       builder: (BuildContext context) => BusinessPage(
-      //           businesses[index]['title'],
-      //           businesses[index]['image'],
-      //           businesses[index]['description']
-      //           ),
-      //     );
-      //   }
-      //   return null;
-
-        
-  //     },
-  //     onUnknownRoute: (RouteSettings settings) {
-  //       return MaterialPageRoute(
-  //           builder: (BuildContext context) =>
-  //               BusinessesPage(businesses));
-  //     },
-  //   );
-  // }
+      
     );
     }
 }

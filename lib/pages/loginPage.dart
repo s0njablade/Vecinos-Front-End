@@ -28,13 +28,19 @@ class _LoginPageState extends State<LoginPage> {
             child: Container(
                 margin: EdgeInsets.all(10.0),
                 child: Center(
-                  child: SingleChildScrollView(
-                    child: Column(
+                    child: SingleChildScrollView(
+                  child: Column(
                     children: <Widget>[
                       TextField(
-                        decoration: InputDecoration(labelText: 'Email', filled: true, fillColor: Colors.white70),
+                        decoration: InputDecoration(
+                            labelText: 'Email',
+                            filled: true,
+                            fillColor: Colors.white70),
                         keyboardType: TextInputType.emailAddress,
-                        style: TextStyle(color: Colors.red[900], fontSize: 26.0, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            color: Colors.red[900],
+                            fontSize: 26.0,
+                            fontWeight: FontWeight.bold),
                         onChanged: (String value) {
                           setState(() {
                             _emailValue = value;
@@ -43,9 +49,15 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       SizedBox(height: 10.0),
                       TextField(
-                        decoration: InputDecoration(labelText: 'Password', filled: true, fillColor: Colors.white70),
+                        decoration: InputDecoration(
+                            labelText: 'Password',
+                            filled: true,
+                            fillColor: Colors.white70),
                         obscureText: true,
-                        style: TextStyle(color: Colors.red[900], fontSize: 26.0, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            color: Colors.red[900],
+                            fontSize: 26.0,
+                            fontWeight: FontWeight.bold),
                         onChanged: (String value) {
                           setState(() {
                             _passwordValue = value;
@@ -55,7 +67,10 @@ class _LoginPageState extends State<LoginPage> {
                       SizedBox(height: 10.0),
                       RaisedButton(
                         child: Text('LOGIN',
-                            style: TextStyle(color: Colors.red[900], fontSize: 20.0,)),
+                            style: TextStyle(
+                              color: Colors.red[900],
+                              fontSize: 20.0,
+                            )),
                         elevation: 8.0,
                         shape: BeveledRectangleBorder(
                             borderRadius:
@@ -70,10 +85,6 @@ class _LoginPageState extends State<LoginPage> {
                       )
                     ],
                   ),
-                )
-                )
-              )
-            )
-          );
+                )))));
   }
 }

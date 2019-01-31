@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../business_manager.dart';
-import '../widgets/products/businesses.dart';
 import './businessList.dart';
-
-// import './communities/community.dart';
-// import './neighborhoods/neighborhoods.dart';
-// import './categories/category.dart';
 
 class BusinessesPage extends StatelessWidget {
   final List<Map<String, dynamic>> businesses;

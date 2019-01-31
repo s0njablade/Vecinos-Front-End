@@ -8,7 +8,6 @@ import '../neighborhoods/neighborhoods.dart';
 import '../categories/category.dart';
 
 class CommunityPage extends StatelessWidget {
-
 // final List<Map<String, dynamic>> businesses;
 
   // CommunityPage(this.businesses);

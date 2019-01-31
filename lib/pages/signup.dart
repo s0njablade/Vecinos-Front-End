@@ -33,42 +33,60 @@ class _SignupPage extends State<SignupPage> {
                         child: Column(
                   children: <Widget>[
                     TextField(
-                      decoration: InputDecoration(labelText: 'Name', filled: true, fillColor: Colors.white70),
+                      decoration: InputDecoration(
+                          labelText: 'Name',
+                          filled: true,
+                          fillColor: Colors.white70),
                       keyboardType: TextInputType.text,
-                      style: TextStyle(color: Colors.red[900], fontSize: 26.0, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          color: Colors.red[900],
+                          fontSize: 26.0,
+                          fontWeight: FontWeight.bold),
                       onChanged: (String value) {
                         setState(() {
                           _nameValue = value;
                         });
                       },
                     ),
-                      SizedBox(height: 10.0),                    
+                    SizedBox(height: 10.0),
                     TextField(
-                      decoration: InputDecoration(labelText: 'Email', filled: true, fillColor: Colors.white70),
+                      decoration: InputDecoration(
+                          labelText: 'Email',
+                          filled: true,
+                          fillColor: Colors.white70),
                       keyboardType: TextInputType.emailAddress,
-                      style: TextStyle(color: Colors.red[900], fontSize: 26.0, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          color: Colors.red[900],
+                          fontSize: 26.0,
+                          fontWeight: FontWeight.bold),
                       onChanged: (String value) {
                         setState(() {
                           _emailValue = value;
                         });
                       },
                     ),
-                      SizedBox(height: 10.0),                    
+                    SizedBox(height: 10.0),
                     TextField(
-                      decoration: InputDecoration(labelText: 'Password', filled: true, fillColor: Colors.white70),
+                      decoration: InputDecoration(
+                          labelText: 'Password',
+                          filled: true,
+                          fillColor: Colors.white70),
                       obscureText: true,
-                      style: TextStyle(color: Colors.red[900],fontSize: 26.0, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          color: Colors.red[900],
+                          fontSize: 26.0,
+                          fontWeight: FontWeight.bold),
                       onChanged: (String value) {
                         setState(() {
                           _passwordValue = value;
                         });
                       },
                     ),
-                    
                     SizedBox(height: 10.0),
                     RaisedButton(
                       child: Text('CREATE ACCOUNT',
-                      style: TextStyle(fontSize: 20.0, color: Colors.red[900])),
+                          style: TextStyle(
+                              fontSize: 20.0, color: Colors.red[900])),
                       elevation: 8.0,
                       shape: BeveledRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(7.0))),
@@ -81,11 +99,6 @@ class _SignupPage extends State<SignupPage> {
                       },
                     )
                   ],
-                )
-              )
-            )
-          )
-        )
-      );
+                ))))));
   }
 }

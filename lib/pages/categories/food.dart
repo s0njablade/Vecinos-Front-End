@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class FoodCreatePage extends StatelessWidget {
   @override
     Widget build(BuildContext context) {
-         return Scaffold(
+        return Scaffold(
         appBar: AppBar(
           title: Text('Food'),
         ),
