@@ -11,7 +11,7 @@ class NBusinessesCreatePage extends StatelessWidget {
       child: new Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-                Image.asset('assets/storefront.jpg'),
+                Image.asset('assets/five.jpg'),
                 Container(
                   padding: EdgeInsets.all(10.0),
                   child: 
