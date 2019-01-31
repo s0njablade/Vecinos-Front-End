@@ -14,14 +14,14 @@ class BusinessesRepo {
       Business(
         id: 2,
         title: 'Pandora on the Hill',
-        image: 'assets/storefront.jpg',
+        image: 'assets/pandora.jpg',
         address: 'Capitol Hill, Denver',
         description: 'We truly are locals who love locals locally.'
       ),
       Business(
         id: 3,
         title: 'Sterre',
-        image: 'assets/storefront.jpg',
+        image: 'assets/sterre.jpg',
         address: 'Stapleton, Denver',
         description: 'Inspired by the independent boutiques of Europe and the travels of founder Danielle van Ede, Sterre offers a rotating selection of quality items for fashion-forward women.'
       ),

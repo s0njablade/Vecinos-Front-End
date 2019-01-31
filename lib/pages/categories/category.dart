@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../businesses.dart';
-import './apperal.dart';
+import './apparel.dart';
 import './food.dart';
 import './other.dart';
 import '../neighborhoods/neighborhoods.dart';
@@ -73,7 +73,7 @@ class CategoryPage extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
-            ApperalCreatePage(),
+            ApparelCreatePage(),
             FoodCreatePage(),
             OtherCreatePage(),
           ],

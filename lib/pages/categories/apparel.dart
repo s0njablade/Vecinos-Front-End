@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ApperalCreatePage extends StatelessWidget {
+class ApparelCreatePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Apperal'),
+          title: Text('Apparel'),
         ),
         body: new Card(
             child: new Column(
