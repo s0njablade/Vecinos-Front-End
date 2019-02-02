@@ -6,6 +6,7 @@ This is my captsone project for Galvanize.
 
 Flutter application
 Dart
+Material Design
 Excode
 
 ## Mission
