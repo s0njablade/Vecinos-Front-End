@@ -1,16 +1,18 @@
-# secondapp
+# Vecinos
 
-A new Flutter project.
+This is my captsone project for Galvanize. 
 
-## Getting Started
+## Technology Used
 
-This project is a starting point for a Flutter application.
+Flutter application
+Dart
+Excode
 
-A few resources to get you started if this is your first Flutter project:
+## Mission
+This is an app that makes small, local businesses easy. It is a way to empower the consumer as well as the small business by giving them the exposure that they need. 
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+You can search for businesses based on:
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+Community: Women Owned Businesses, LGBTQ Owned Businesses, POC Owned Businesses. 
+Neighborhood: Can find neighborhood specific businesses
+Category: Can search based on category
