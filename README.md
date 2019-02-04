@@ -7,7 +7,7 @@ This is my captsone project for Galvanize.
 Flutter application
 Dart
 Material Design
-Excode
+Xcode
 
 ## Mission
 This is an app that makes small, local businesses easy. It is a way to empower the consumer as well as the small business by giving them the exposure that they need. 
