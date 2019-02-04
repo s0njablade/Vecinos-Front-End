@@ -1,6 +1,6 @@
 # Vecinos
 
-This is my captsone project for Galvanize. 
+This is my capstone project for Galvanize. 
 
 ## Technology Used
 
