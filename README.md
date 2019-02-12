@@ -16,7 +16,7 @@ You can search for businesses based on:
 
 ## Demo
 
-<img src="https://giphy.com/embed/9uITo6wFENBJ8L2F28" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen>
+![](capstone1.gif)
 
 
 
